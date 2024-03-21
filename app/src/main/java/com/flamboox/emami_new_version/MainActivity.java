@@ -45,18 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
         deviceLayout = findViewById(R.id.deviceLayout);
 
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled()) {
-            Toast.makeText(this, "Bluetooth is not supported or not enabled on this device", Toast.LENGTH_SHORT).show();
-            finish();
-            return;
+        // Vérifiez si la permission ACCESS_FINE_LOCATION n'est pas déjà accordée
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // Si la permission n'est pas accordée, demandez-la à l'utilisateur
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_ACCESS_FINE_LOCATION);
+        } else {
+            // Si la permission est déjà accordée, initialisez le Bluetooth et commencez le scan
+            initBluetooth();
         }
-
-        // Initialize BluetoothLeScanner
-        bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
-
-        // Start BLE scan
-        startScan();
     }
 
     private void startScan() {
@@ -90,5 +86,35 @@ public class MainActivity extends AppCompatActivity {
         TextView deviceTextView = new TextView(this);
         deviceTextView.setText(name + " - " + address);
         deviceLayout.addView(deviceTextView);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_ACCESS_FINE_LOCATION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Si la permission est accordée, initialisez le Bluetooth et commencez le scan
+                initBluetooth();
+            } else {
+                // Si la permission est refusée, affichez un message à l'utilisateur
+                Toast.makeText(this, "Permission denied. Cannot scan for BLE devices.", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
+
+    private void initBluetooth() {
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled()) {
+            Toast.makeText(this, "Bluetooth is not supported or not enabled on this device", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+
+        // Initialize BluetoothLeScanner
+        bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+
+        // Start BLE scan
+        startScan();
     }
 }
