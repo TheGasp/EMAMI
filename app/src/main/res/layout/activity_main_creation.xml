@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityCreation">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="75dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="backClicked"
+        android:text="Back"
+        android:textColor="#FDFDFD"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/editTextNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:hint="Nom"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/editTextprenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNom"
+        android:layout_marginTop="30dp"
+        android:hint="Prénom"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:layout_below="@id/editTextprenom"
+        android:layout_marginTop="30dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextMdP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/editTextConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirmer le mot de passe"
+        android:layout_below="@id/editTextMdP"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonContinu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextConfirmation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:onClick="contiClicked"
+        android:text="Continuer" />
+
+
+</RelativeLayout>

@@ -13,6 +13,15 @@
         android:theme="@style/Theme.EMAMI_new_version"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivityReseau"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityCreation"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityMDP"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
