@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:accessibilityLiveRegion="polite"
+    android:background="#0000BCD4"
+    android:foregroundTint="@color/white"
+    android:visibility="visible"
     tools:context=".MainActivityCreation">
 
     <Button
@@ -22,9 +26,9 @@
         android:id="@+id/editTextNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:hint="Nom"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editTextprenom"
@@ -33,42 +37,49 @@
         android:layout_below="@id/editTextNom"
         android:layout_marginTop="30dp"
         android:hint="Prénom"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextprenom"
+        android:layout_marginTop="30dp"
+        android:hint="Numéro de téléphone"
+        android:inputType="text|phone" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Email"
-        android:layout_below="@id/editTextprenom"
+        android:layout_below="@id/editTextNumero"
         android:layout_marginTop="30dp"
+        android:hint="Email"
         android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/editTextMdP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mot de passe"
         android:layout_below="@id/editTextEmail"
         android:layout_marginTop="30dp"
-        android:inputType="textPassword"/>
+        android:hint="Mot de passe"
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/editTextConfirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Confirmer le mot de passe"
         android:layout_below="@id/editTextMdP"
         android:layout_marginTop="30dp"
+        android:hint="Confirmer le mot de passe"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonContinu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextConfirmation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="550dp"
         android:clickable="true"
         android:onClick="contiClicked"
         android:text="Continuer" />

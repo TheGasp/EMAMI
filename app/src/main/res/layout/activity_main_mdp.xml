@@ -27,7 +27,7 @@
         android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonEnvoie"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextEmail"
         android:layout_centerHorizontal="true"

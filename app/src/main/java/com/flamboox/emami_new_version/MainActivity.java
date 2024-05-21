@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
         textViewForgotPassword = findViewById(R.id.textViewForgotPassword);
-        textViewSignUp = findViewById(R.id.textViewSignUp);
+        textViewSignUp= findViewById(R.id.textViewSignUp);
 
 
 
@@ -33,18 +33,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(ouvrirChangerMdP);
         });
 
-
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent ouvrirInscrip1 = new Intent(MainActivity.this, MainActivityCreation.class);
-                startActivity(ouvrirInscrip1);
-            }
+        this.textViewSignUp.setOnClickListener(v -> {
+            Intent ouvrirInscritp1 = new Intent(MainActivity.this, MainActivityCreation.class);
+            startActivity(ouvrirInscritp1);
         });
-
-
-
 
     }
 

@@ -22,7 +22,7 @@
         android:id="@+id/editTextFacebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:hint="Facebook"
         android:inputType="textPersonName" />
 
@@ -35,30 +35,47 @@
         android:layout_marginTop="30dp"
         android:inputType="textShortMessage" />
     <EditText
-        android:id="@+id/editTextNumero"
+        android:id="@+id/editTextTwitter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Numéro de téléphone"
+        android:hint="Twitter"
         android:layout_below="@id/editTextInstagram"
         android:layout_marginTop="30dp"
-        android:inputType="text|phone" />
+        android:inputType="textShortMessage" />
 
     <EditText
         android:id="@+id/editTextSnap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Snapchat"
-        android:layout_below="@id/editTextNumero"
+        android:layout_below="@id/editTextTwitter"
+        android:layout_marginTop="30dp"
+        android:inputType="textShortMessage" />
+
+    <EditText
+        android:id="@+id/editTextLinkedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LinkedIn"
+        android:layout_below="@id/editTextSnap"
+        android:layout_marginTop="30dp"
+        android:inputType="textShortMessage" />
+
+    <EditText
+        android:id="@+id/editTextDiscord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Discord"
+        android:layout_below="@id/editTextLinkedIn"
         android:layout_marginTop="30dp"
         android:inputType="textShortMessage" />
 
     <Button
         android:id="@+id/buttonInscrit"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextSnap"
+        android:layout_marginTop="550dp"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:text="S'inscrire" />
 
 </RelativeLayout>
