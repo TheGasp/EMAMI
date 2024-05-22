@@ -34,6 +34,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".NumTelActivity" />
+        <activity android:name=".AddActivity"/>
+        <activity android:name=".ResActivity"/>
+        <activity android:name=".NomPrenomActivity"/>
+        <activity android:name=".PhotoActivity"/>
+        <activity android:name=".ParamActivity"/>
+        <activity android:name=".ProfilActivity"/>
     </application>
 
 </manifest>

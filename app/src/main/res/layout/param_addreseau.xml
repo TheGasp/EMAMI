@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            app:cardBackgroundColor="#900C36"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewParamAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="Ajoutez un réseau"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FFD180"/>
+
+            <EditText
+                android:id="@+id/editTextAddReseau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:textColor="#FFD180"
+                app:layout_constraintTop_toBottomOf="@id/textViewParamAdd"
+                android:inputType="text"
+                android:text="Nom du réseau social" />
+
+            <EditText
+                android:id="@+id/editTextAddnomReseau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:textColor="#FFD180"
+                app:layout_constraintTop_toBottomOf="@id/editTextAddReseau"
+                android:inputType="text"
+                android:text="Nom de  profil" />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/buttonretour1"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="Retour"
+            android:textSize="7sp"
+            app:cardBackgroundColor="#FFD180"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="12dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
