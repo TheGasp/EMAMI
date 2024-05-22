@@ -38,5 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.sun.mail:android-mail:1.5.6'
     implementation 'com.sun.mail:android-activation:1.5.6'
+    implementation "androidx.room:room-runtime:2.3.0"
+    annotationProcessor "androidx.room:room-compiler:2.3.0"
 
 }

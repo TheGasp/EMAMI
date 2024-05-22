@@ -1,6 +1,8 @@
 package com.flamboox.emami_new_version;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,12 +10,15 @@ import android.widget.EditText;
 import android.content.Intent;
 import android.widget.TextView;
 
+import com.flamboox.bdd.AppDatabase;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private Button buttonLogin;
     private TextView textViewForgotPassword,textViewSignUp;
+    private static AppDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(ouvrirInscritp1);
         });
 
+        database = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "my-database").build();
+    }
+
+    public static AppDatabase getDatabase() {
+        return database;
     }
 
 }
