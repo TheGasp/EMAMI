@@ -4,78 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityReseau">
+    tools:context=".MainActivityReseau"
+    android:background="@color/app_color">
 
-    <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="75dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:clickable="true"
-        android:onClick="backClicked"
-        android:text="Back"
-        android:textColor="#FDFDFD"
-        android:textSize="10sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextFacebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:hint="Facebook"
-        android:inputType="textPersonName" />
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:onClick="backClicked"
+            android:text="Back"
+            android:textColor="#FDFDFD"
+            app:backgroundTint="@color/icon_color"
+            android:textSize="10sp" />
 
-    <EditText
-        android:id="@+id/editTextInstagram"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Instagram"
-        android:layout_below="@id/editTextFacebook"
-        android:layout_marginTop="30dp"
-        android:inputType="textShortMessage" />
-    <EditText
-        android:id="@+id/editTextTwitter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Twitter"
-        android:layout_below="@id/editTextInstagram"
-        android:layout_marginTop="30dp"
-        android:inputType="textShortMessage" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_border"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextSnap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Snapchat"
-        android:layout_below="@id/editTextTwitter"
-        android:layout_marginTop="30dp"
-        android:inputType="textShortMessage" />
 
-    <EditText
-        android:id="@+id/editTextLinkedIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="LinkedIn"
-        android:layout_below="@id/editTextSnap"
-        android:layout_marginTop="30dp"
-        android:inputType="textShortMessage" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Facebook"
+                app:hintTextColor="@color/black">
 
-    <EditText
-        android:id="@+id/editTextDiscord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Discord"
-        android:layout_below="@id/editTextLinkedIn"
-        android:layout_marginTop="30dp"
-        android:inputType="textShortMessage" />
 
-    <Button
-        android:id="@+id/buttonInscrit"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
-        android:text="S'inscrire" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Instagram"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Twitter"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTwitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Snapchat"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSnap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Discord"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDiscord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="LinkedIn"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextLinkedIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonInscrit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:text="S'inscrire"
+                app:backgroundTint="@color/icon_color" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>

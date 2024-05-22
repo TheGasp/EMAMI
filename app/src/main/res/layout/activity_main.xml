@@ -15,15 +15,15 @@
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
-            android:layout_height="119dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
-            android:fontFamily="@font/dancing_bold"
+            android:fontFamily="@font/callingstone"
             android:gravity="center"
             android:padding="30dp"
             android:text="EMAmis"
             android:layout_marginTop="40dp"
             android:textColor="@color/white"
-            android:textSize="35sp" />
+            android:textSize="55sp" />
 
         <LinearLayout
 
@@ -46,7 +46,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editTextEmail"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textEmailAddress">
+
+                </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editTextPassword"
-                    android:inputType="textPassword"
+                    android:inputType="textPassword"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -87,7 +89,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="dp"
             android:clickable="true"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_margin="20dp"
