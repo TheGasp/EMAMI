@@ -13,13 +13,13 @@
         android:theme="@style/Theme.EMAMI_new_version"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivityReseau"
+            android:name=".Reseau"
             android:exported="false" />
         <activity
-            android:name=".MainActivityCreation"
+            android:name=".Creation"
             android:exported="false" />
         <activity
-            android:name=".MainActivityMDP"
+            android:name=".MDP"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

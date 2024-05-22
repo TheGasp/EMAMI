@@ -2,7 +2,6 @@ package com.flamboox.emami_new_version;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.connection);
 
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -29,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         this.textViewForgotPassword.setOnClickListener(v -> {
-            Intent ouvrirChangerMdP = new Intent(MainActivity.this, MainActivityMDP.class);
+            Intent ouvrirChangerMdP = new Intent(MainActivity.this, MDP.class);
             startActivity(ouvrirChangerMdP);
         });
 
         this.textViewSignUp.setOnClickListener(v -> {
-            Intent ouvrirInscritp1 = new Intent(MainActivity.this, MainActivityCreation.class);
+            Intent ouvrirInscritp1 = new Intent(MainActivity.this, Creation.class);
             startActivity(ouvrirInscritp1);
         });
 

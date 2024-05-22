@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivityReseau extends AppCompatActivity {
+public class Reseau extends AppCompatActivity {
     Button BoutonInscrit;
     EditText Facebook, Instagram, Twitter, Snapchat, Discord, TikTok;
 

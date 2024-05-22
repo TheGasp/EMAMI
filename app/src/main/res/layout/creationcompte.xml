@@ -8,7 +8,7 @@
     android:foregroundTint="@color/white"
     android:visibility="visible"
     android:background="@color/app_color"
-    tools:context=".MainActivityCreation">
+    tools:context=".Creation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -149,3 +149,5 @@
 
         </LinearLayout>
     </LinearLayout>
+
+</RelativeLayout>

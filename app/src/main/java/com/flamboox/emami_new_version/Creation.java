@@ -2,21 +2,17 @@ package com.flamboox.emami_new_version;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
-import android.text.TextWatcher;
-import android.os.Handler;
-import android.widget.Toast;
 
-public class MainActivityCreation extends AppCompatActivity {
+public class Creation extends AppCompatActivity {
     Button BoutonContinuer;
     EditText Nom, Prenom, Email, MdP, ConfirmationMdP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_creation);
+        setContentView(R.layout.creationcompte);
 
         BoutonContinuer = findViewById(R.id.buttonContinu);
 
@@ -33,7 +29,7 @@ public class MainActivityCreation extends AppCompatActivity {
             toast.show();}*/
 
         this.BoutonContinuer.setOnClickListener(v -> {
-            Intent ouvrirPage2 = new Intent(MainActivityCreation.this, MainActivityReseau.class);
+            Intent ouvrirPage2 = new Intent(Creation.this, Reseau.class);
             startActivity(ouvrirPage2);
         });
     }}
