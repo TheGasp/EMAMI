@@ -14,23 +14,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:cardBackgroundColor="#FFD180"
+        app:cardCornerRadius="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        app:cardCornerRadius="10dp"
         app:layout_constraintTop_toTopOf="parent" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/carre1"
@@ -38,12 +37,11 @@
                 android:layout_height="35dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="10dp"
-                android:layout_marginTop="7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/logoReseau"
+                    android:id="@+id/logoReseauProfil"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
@@ -52,26 +50,16 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <Button
-                android:id="@+id/button"
+            <TextView
+                android:id="@+id/TextViewReseauProfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FEFEFE"
                 android:text="Réseau"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#000000"
-                android:layout_marginLeft="20dp"
-                app:layout_constraintStart_toEndOf="@+id/carre1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <CheckBox
-                android:id="@+id/checkBox1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="#900C36"
-                android:checked="true"
-                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
