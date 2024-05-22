@@ -24,8 +24,6 @@ public class NumTelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.param_numtel);
 
-        //user = (Utilisateur) getIntent().getSerializableExtra("utilisateur");
-
         editTextNum = findViewById(R.id.editTextNumTel);
         button = findViewById(R.id.buttonNum);
 
