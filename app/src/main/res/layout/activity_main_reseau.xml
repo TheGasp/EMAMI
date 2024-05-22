@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityReseau">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="75dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="backClicked"
+        android:text="Back"
+        android:textColor="#FDFDFD"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/editTextFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:hint="Facebook"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextInstagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instagram"
+        android:layout_below="@id/editTextFacebook"
+        android:layout_marginTop="30dp"
+        android:inputType="textShortMessage" />
+    <EditText
+        android:id="@+id/editTextNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numéro de téléphone"
+        android:layout_below="@id/editTextInstagram"
+        android:layout_marginTop="30dp"
+        android:inputType="text|phone" />
+
+    <EditText
+        android:id="@+id/editTextSnap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Snapchat"
+        android:layout_below="@id/editTextNumero"
+        android:layout_marginTop="30dp"
+        android:inputType="textShortMessage" />
+
+    <Button
+        android:id="@+id/buttonInscrit"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSnap"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="S'inscrire" />
+
+</RelativeLayout>

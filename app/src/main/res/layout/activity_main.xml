@@ -6,202 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <RelativeLayout
-            android:padding="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/teal_200"
-            >
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bienvenue USER8691 !"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:fontFamily="casual"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Utiliser EMAMI en continu"
-                android:layout_marginTop="50dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:fontFamily="casual"
-                />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Identification"
+        android:textSize="34sp"
+        android:textColor="#6200ED"/>
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="300dp"
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
 
-                ></Switch>
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="25dp"
+        android:hint="Mot de Passe"
+        android:inputType="textPassword" />
 
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="240dp"
+        android:clickable="true"
+        android:onClick="forgotPasswordClicked"
+        android:text="Mot de passe oublié ?"
+        android:textColor="#747475"
+        android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
 
-        </RelativeLayout>
+        android:text="Connexion" />
 
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:padding="10dp"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Qui ais je rencontré ?"
-            android:textStyle="bold"
-            android:fontFamily="casual"
-            ></TextView>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            >
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="5dp"
-
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Connectez vous !"
-                        ></TextView>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lea"
-                            ></TextView>
-
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lea"
-                            ></TextView>
-
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lea"
-                            ></TextView>
-
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lea"
-                            ></TextView>
-
-                    </RelativeLayout>
-
-
-                    <TextView
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Vous vous êtes croisés !"
-                        ></TextView>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        android:orientation="vertical"
-                        android:id="@+id/deviceLayout"
-                        >
-
-                        <ListView
-                            android:id="@+id/deviceListView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-
-
-                    </LinearLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background = "#F3AA84"
-                        android:layout_margin="5dp"
-                        >
-
-                        <TextView
-                            android:id="@+id/listView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="HELLLO"
-                            ></TextView>
-                    </RelativeLayout>
-
-
-
-
-
-
-                </LinearLayout>
-
-            </ScrollView>
-
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
-
-
-
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLogin"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="275dp"
+        android:clickable="true"
+        android:onClick="SignUpClicked"
+        android:text="Créer un compte "
+        android:textColor="#747475"
+        android:textSize="16sp" />
 
 
 

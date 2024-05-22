@@ -1,94 +1,53 @@
 package com.flamboox.emami_new_version;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.le.BluetoothLeScanner;
-import android.bluetooth.le.ScanCallback;
-import android.bluetooth.le.ScanResult;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.content.Intent;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int REQUEST_ACCESS_FINE_LOCATION = 1;
-
-    private BluetoothAdapter bluetoothAdapter;
-    private LinearLayout deviceLayout;
-    private BluetoothLeScanner bluetoothLeScanner;
-    private ScanCallback scanCallback; // Déclaration de la variable de callback
-
+    private EditText editTextEmail, editTextPassword;
+    private Button buttonLogin;
+    private TextView textViewForgotPassword,textViewSignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        deviceLayout = findViewById(R.id.deviceLayout);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
+        textViewForgotPassword = findViewById(R.id.textViewForgotPassword);
+        textViewSignUp = findViewById(R.id.textViewSignUp);
 
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled()) {
-            Toast.makeText(this, "Bluetooth is not supported or not enabled on this device", Toast.LENGTH_SHORT).show();
-            finish();
-            return;
-        }
 
-        // Initialize BluetoothLeScanner
-        bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
 
-        // Start BLE scan
-        startScan();
-    }
 
-    private void startScan() {
-        scanCallback = new ScanCallback() { // Initialisation du scanCallback
+        this.textViewForgotPassword.setOnClickListener(v -> {
+            Intent ouvrirChangerMdP = new Intent(MainActivity.this, MainActivityMDP.class);
+            startActivity(ouvrirChangerMdP);
+        });
+
+
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onScanResult(int callbackType, ScanResult result) {
-                BluetoothDevice device = result.getDevice();
-                String deviceName = device.getName();
-                String deviceAddress = device.getAddress();
-                // Add the detected BLE device to the LinearLayout
-                addDeviceToList(deviceName, deviceAddress);
+            public void onClick(View view) {
+                Intent ouvrirInscrip1 = new Intent(MainActivity.this, MainActivityCreation.class);
+                startActivity(ouvrirInscrip1);
             }
-        };
+        });
 
-        // Start the scan
-        bluetoothLeScanner.startScan(scanCallback);
+
+
+
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        // Stop BLE scan when the activity is stopped
-        stopScan();
-    }
-
-    private void stopScan() {
-        bluetoothLeScanner.stopScan(scanCallback);
-    }
-
-    private void addDeviceToList(String name, String address) {
-        TextView deviceTextView = new TextView(this);
-        deviceTextView.setText(name + " - " + address);
-        deviceLayout.addView(deviceTextView);
-    }
 }
+
+
