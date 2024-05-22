@@ -14,7 +14,7 @@ public class MainActivityReseau extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_reseau);
+        setContentView(R.layout.reseau);
 
         BoutonInscrit = findViewById(R.id.buttonInscrit);
 
@@ -23,6 +23,7 @@ public class MainActivityReseau extends AppCompatActivity {
         Twitter = findViewById(R.id.editTextTwitter);
         Snapchat = findViewById(R.id.editTextSnap);
         Discord = findViewById(R.id.editTextDiscord);
+        TikTok=findViewById(R.id.editTextTikTok);
     }
 
 }
