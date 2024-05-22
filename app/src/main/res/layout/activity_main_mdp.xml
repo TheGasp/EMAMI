@@ -4,35 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_color"
     tools:context=".MainActivityMDP">
 
-    <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="75dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:clickable="true"
-        android:onClick="backClicked"
-        android:text="Back"
-        android:textColor="#FDFDFD"
-        android:textSize="10sp" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:onClick="backClicked"
+            android:text="Back"
+            android:textColor="#FDFDFD"
+            app:backgroundTint="@color/icon_color"
+            android:textSize="10sp" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:text="Envoyer un nouveau mot de passe" />
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/callingstone"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="EMAmis"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textSize="55sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/round_border"
+            android:layout_marginTop="90dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="E-mail"
+                android:layout_margin="20dp"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/baseline_email_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextEmail"
+                    android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonEnvoie"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_margin="20dp"
+                app:backgroundTint="@color/icon_color"
+                android:text="Envoyer un nouveau mot de passe" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
 
 </RelativeLayout>
