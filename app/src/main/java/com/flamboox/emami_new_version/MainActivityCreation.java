@@ -19,9 +19,8 @@ public class MainActivityCreation extends AppCompatActivity {
         setContentView(R.layout.activity_main_creation);
 
         BoutonContinuer = findViewById(R.id.buttonContinu);
+
         Nom = findViewById(R.id.editTextNom);
-
-
         Prenom = findViewById(R.id.editTextprenom);
         Email = findViewById(R.id.editTextEmail);
         MdP = findViewById(R.id.editTextMdP);
