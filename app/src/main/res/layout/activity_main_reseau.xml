@@ -32,49 +32,76 @@
             android:background="@drawable/round_border"
             android:orientation="vertical">
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:hint="Facebook"
-                app:hintTextColor="@color/black">
+                android:layout_height="match_parent">
 
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextFacebook"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Instagram"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/baseline_person_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextInstagram"
-                    android:layout_width="match_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="340dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="25dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+                    android:hint="Facebook"
+                    app:hintTextColor="@color/black">
 
-            </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextFacebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_marginTop="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/Fb">
+
+                </ImageView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content"
+                    android:layout_width="340dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="100dp"
+                    android:hint="Instagram"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextInstagram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textShortMessage"></com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/Fb">
+
+                </ImageView>
+            </RelativeLayout>
+
+
+
+
+
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
                 android:hint="Twitter"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/baseline_person_24">
+                app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextTwitter"
@@ -86,12 +113,12 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
                 android:hint="Snapchat"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/baseline_person_24">
+                app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextSnap"
@@ -103,12 +130,12 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
                 android:hint="Discord"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/baseline_person_24">
+                app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDiscord"
@@ -118,32 +145,19 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="LinkedIn"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/baseline_person_24">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextLinkedIn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"></com.google.android.material.textfield.TextInputEditText>
 
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonInscrit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:layout_marginTop="20dp"
                 android:text="S'inscrire"
                 app:backgroundTint="@color/icon_color" />
+
 
 
         </LinearLayout>
