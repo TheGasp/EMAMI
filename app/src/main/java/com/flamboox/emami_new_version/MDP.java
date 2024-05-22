@@ -3,40 +3,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Properties;
 import java.util.Random;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class MDP extends AppCompatActivity {
     private EditText editTextEmailAddress;
-    Button button;
-    EditText sendto, subject, body;
+    private Button button;
+    private EditText emailAddress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reinitialisationmdp);
-        sendto = findViewById(R.id.editTextEmail);
-        String subject = "Réinitialisation du mot de passe ";
-        String body = "votre nouveau mot de passe est:      " + generateNewPassword();
+
+        emailAddress= findViewById(R.id.editTextEmail);
         button = findViewById(R.id.buttonEnvoie);
 
-        button.setOnClickListener(view -> {
-            String emailsend = sendto.getText().toString();
-            String emailsubject = subject.toString();
-            String emailbody = body.toString();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String newPassword = generateNewPassword();
 
-            Intent intent = new Intent(Intent.ACTION_SEND);
+                gestionEmail.sendPasswordResetEmail(String.valueOf(emailAddress),newPassword);
 
-            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailsend});
-            intent.putExtra(Intent.EXTRA_SUBJECT, emailsubject);
-            intent.putExtra(Intent.EXTRA_TEXT, emailbody);
-
-            intent.setType("message/rfc822");
-
-            startActivity(Intent.createChooser(intent, "Choose an Email client :"));
+                Toast.makeText(MDP.this, "Un email de réinitialisation du mot de passe a été envoyé.", Toast.LENGTH_SHORT).show();
+            }
         });
-
     }
+
+
     private String generateNewPassword() {
         Random random = new Random();
 
