@@ -3,26 +3,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.AsyncTask;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 import java.util.Random;
-import java.util.Properties;
 
-public class MainActivityMDP extends AppCompatActivity {
+public class MDP extends AppCompatActivity {
     private EditText editTextEmailAddress;
     Button button;
     EditText sendto, subject, body;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_mdp);
+        setContentView(R.layout.reinitialisationmdp);
         sendto = findViewById(R.id.editTextEmail);
         String subject = "Réinitialisation du mot de passe ";
-        String body = "votre nouveau mot de passe est:" + generateNewPassword();
-        button = findViewById(R.id.buttonLogin);
+        String body = "votre nouveau mot de passe est:      " + generateNewPassword();
+        button = findViewById(R.id.buttonEnvoie);
 
         button.setOnClickListener(view -> {
             String emailsend = sendto.getText().toString();
