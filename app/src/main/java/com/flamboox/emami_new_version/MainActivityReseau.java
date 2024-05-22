@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class MainActivityReseau extends AppCompatActivity {
     Button BoutonInscrit;
-    EditText Facebook, Instagram, Twitter, Snapchat, Discord, LinkedIn;
+    EditText Facebook, Instagram, Twitter, Snapchat, Discord, TikTok;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
